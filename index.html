@@ -78,11 +78,12 @@ max-width:800px;
 .hero h1{
 font-size:3rem;
 margin-bottom:20px;
+animation:fadeDown 1s ease;
 }
 
 .hero p{
 margin-bottom:25px;
-font-size:1.1rem;
+animation:fadeUp 1.2s ease;
 }
 
 .btn{
@@ -124,24 +125,37 @@ gap:30px;
 
 .card{
 background:white;
-padding:25px;
 border-radius:20px;
+overflow:hidden;
 box-shadow:0 10px 25px rgba(0,0,0,0.1);
 transition:0.4s;
+animation:fadeUp 1s ease;
 }
 
 .card:hover{
 transform:translateY(-10px);
 }
 
-.card h3{
-color:#2e7d32;
-margin-bottom:15px;
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
 }
 
-.card p{
-font-size:0.95rem;
-margin-bottom:20px;
+.card-content{
+padding:20px;
+}
+
+.card h3{
+color:#2e7d32;
+margin-bottom:10px;
+}
+
+.precio{
+font-weight:bold;
+margin:15px 0;
+font-size:1.2rem;
+color:#1b5e20;
 }
 
 /* SOBRE */
@@ -149,6 +163,7 @@ margin-bottom:20px;
 background:#e8f5e9;
 border-radius:20px;
 padding:40px;
+animation:fadeUp 1s ease;
 }
 
 /* TESTIMONIOS */
@@ -166,6 +181,25 @@ box-shadow:0 5px 15px rgba(0,0,0,0.08);
 font-style:italic;
 }
 
+/* WHATSAPP FLOAT */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50%;
+font-size:20px;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+transition:0.3s;
+}
+
+.whatsapp:hover{
+transform:scale(1.1);
+}
+
 /* FOOTER */
 footer{
 background:#1b5e20;
@@ -175,15 +209,19 @@ padding:30px 20px;
 margin-top:60px;
 }
 
-footer p{
-margin:5px 0;
+/* ANIMACIONES */
+@keyframes fadeUp{
+from{opacity:0; transform:translateY(30px);}
+to{opacity:1; transform:translateY(0);}
 }
 
-/* RESPONSIVE */
-@media(max-width:768px){
-.hero h1{
-font-size:2rem;
+@keyframes fadeDown{
+from{opacity:0; transform:translateY(-30px);}
+to{opacity:1; transform:translateY(0);}
 }
+
+@media(max-width:768px){
+.hero h1{font-size:2rem;}
 }
 
 </style>
@@ -195,14 +233,13 @@ font-size:2rem;
 <a href="#inicio">Inicio</a>
 <a href="#productos">Productos</a>
 <a href="#sobre">Sobre Nosotros</a>
-<a href="#contacto">Contacto</a>
 </nav>
 
 <section class="hero" id="inicio">
 <div class="hero-content">
 <h1>RAÍCES VIVAS</h1>
-<p>La fuerza de la naturaleza en cada gota. Productos capilares naturales libres de químicos agresivos.</p>
-<a href="#productos" class="btn">Descubrir Productos</a>
+<p>La fuerza de la naturaleza en cada gota. Cuidado capilar 100% natural.</p>
+<a href="#productos" class="btn">Ver Productos</a>
 </div>
 </section>
 
@@ -212,15 +249,23 @@ font-size:2rem;
 <div class="productos">
 
 <div class="card">
+<img src="imagen1.jpg" alt="Tónico de Romero">
+<div class="card-content">
 <h3>Tónico Capilar de Romero</h3>
-<p>Estimula el crecimiento, fortalece las raíces y mejora la circulación del cuero cabelludo aportando frescura natural.</p>
-<a href="https://wa.me/573234629922" class="btn">Pedir por WhatsApp</a>
+<p>Estimula el crecimiento y fortalece las raíces del cabello.</p>
+<div class="precio">$$$$$$$$</div>
+<a href="https://wa.me/573234629922" class="btn">Comprar</a>
+</div>
 </div>
 
 <div class="card">
+<img src="imagen2.jpg" alt="Aceite de Aguacate">
+<div class="card-content">
 <h3>Aceite de Aguacate Capilar</h3>
-<p>Hidrata profundamente, repara daños causados por el calor y aporta brillo y suavidad gracias a sus vitaminas esenciales.</p>
-<a href="https://wa.me/573234629922" class="btn">Pedir por WhatsApp</a>
+<p>Hidrata profundamente y aporta brillo natural.</p>
+<div class="precio">$$$$$$$$</div>
+<a href="https://wa.me/573234629922" class="btn">Comprar</a>
+</div>
 </div>
 
 </div>
@@ -230,32 +275,17 @@ font-size:2rem;
 <h2>Sobre Nosotros</h2>
 <div class="sobre">
 <p>
-Raíces Vivas nació con el propósito de ofrecer alternativas naturales y efectivas para el cuidado capilar. 
-Creemos en el poder de la naturaleza y en la importancia de reducir el uso de químicos agresivos.
+Raíces Vivas nació con el propósito de ofrecer alternativas naturales y efectivas para el cuidado capilar,
+reduciendo el uso de químicos agresivos y promoviendo ingredientes orgánicos.
 </p>
 </div>
 </section>
 
-<section>
-<h2>Lo que dicen nuestros clientes</h2>
-<div class="testimonios">
-<div class="testimonio">"Desde que uso el tónico mi cabello crece más fuerte y saludable."</div>
-<div class="testimonio">"El aceite de aguacate dejó mi cabello brillante y suave."</div>
-<div class="testimonio">"Productos naturales que realmente funcionan."</div>
-</div>
-</section>
-
-<section id="contacto">
-<h2>Contacto</h2>
-<p>📞 +57 323 462 9922</p>
-<p>📧 raicesvivas@gmail.com</p>
-<a href="https://wa.me/573234629922" class="btn">Escríbenos ahora</a>
-</section>
-
 <footer>
-<p>© 2026 Raíces Vivas</p>
-<p>Cuidado Capilar Natural</p>
+<p>© 2026 Raíces Vivas - Todos los derechos reservados</p>
 </footer>
+
+<a href="https://wa.me/573234629922" class="whatsapp">💬</a>
 
 </body>
 </html>
