@@ -48,17 +48,18 @@ nav a:hover{
 /* HERO */
 .hero{
     position:relative;
-    height:70vh; /* MÁS PEQUEÑO */
+    height:70vh; /* reducido */
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
     color:white;
-    background:url('fondo.jpg');
+    background:url('fondo.jpg'); /* tu fondo */
     background-size:cover;
     background-position:center;
     overflow:hidden;
-    animation:fadeIn 1.5s ease;
+    padding-top:80px;
+    animation:fadeIn 1.2s ease;
 }
 
 @keyframes fadeIn {
@@ -70,8 +71,6 @@ nav a:hover{
     display:flex;
     flex-direction:column;
     align-items:center;
-    justify-content:center;
-    padding-top:60px;
 }
 
 /* LOGO */
@@ -103,10 +102,12 @@ nav a:hover{
 .hero h1{
     font-size:2.5rem;
     margin-bottom:10px;
+    text-shadow:0 2px 4px rgba(0,0,0,0.4);
 }
 
 .hero p{
     margin-bottom:25px;
+    text-shadow:0 2px 4px rgba(0,0,0,0.4);
 }
 
 /* BOTÓN */
@@ -139,9 +140,11 @@ h2{
 
 /* PRODUCTOS */
 #productos{
-    background:url('bosque.jpg'); /* AÑADE TU IMAGEN DE NATURALEZA */
+    background:url('bosque.jpg'); /* imagen de naturaleza */
     background-size:cover;
     background-position:center;
+    padding-top:100px;
+    padding-bottom:100px;
 }
 
 .productos{
@@ -153,22 +156,22 @@ h2{
 }
 
 .card{
-    background:rgba(255,255,255,0.9);
+    background:rgba(255,255,255,0.92);
     border-radius:25px;
-    box-shadow:0 15px 35px rgba(0,0,0,0.1);
+    box-shadow:0 15px 35px rgba(0,0,0,0.2);
     overflow:hidden;
     display:flex;
     flex-direction:column;
     align-items:center;
     text-align:center;
-    transition:0.4s;
+    transition:0.3s;
     padding-bottom:20px;
-    animation:fadeIn 1s ease;
+    animation:fadeIn 1.2s ease;
 }
 
 .card:hover{
     transform:translateY(-10px);
-    box-shadow:0 20px 45px rgba(0,0,0,0.2);
+    box-shadow:0 20px 45px rgba(0,0,0,0.25);
 }
 
 .card img{
@@ -190,7 +193,7 @@ h2{
 #sobre{
     background:#b7e4c7;
     padding:80px 20px;
-    animation:fadeIn 1.2s ease;
+    animation:fadeIn 1.4s ease;
 }
 
 /* FOOTER */
@@ -217,14 +220,10 @@ footer{
 
 /* RESPONSIVE */
 @media(max-width:768px){
-    .hero{
-        height:60vh;
-    }
+    .hero{height:60vh;}
     .hero h1{font-size:2rem;}
     .logo-circulo{width:120px;height:120px;}
-    .productos{
-        grid-template-columns:1fr;
-    }
+    .productos{grid-template-columns:1fr;}
 }
 </style>
 </head>
@@ -232,23 +231,24 @@ footer{
 <body>
 
 <nav>
-<a href="#inicio">Inicio</a>
-<a href="#productos">Productos</a>
-<a href="#sobre">Sobre Nosotros</a>
+    <a href="#inicio">Inicio</a>
+    <a href="#productos">Productos</a>
+    <a href="#sobre">Sobre Nosotros</a>
 </nav>
 
+<!-- HERO SIN VIDEO -->
 <section class="hero" id="inicio">
-<div class="hero-content">
+    <div class="hero-content">
 
-<div class="logo-circulo">
-    <img src="logo.jpg" alt="Logo Raíces Vivas">
-</div>
+        <div class="logo-circulo">
+            <img src="logo.jpg" alt="Logo Raíces Vivas">
+        </div>
 
-<h1>RAÍCES VIVAS</h1>
-<p>La fuerza de la naturaleza en cada gota.</p>
-<a href="#productos" class="btn">Ver Productos</a>
+        <h1>RAÍCES VIVAS</h1>
+        <p>La fuerza de la naturaleza en cada gota.</p>
+        <a href="#productos" class="btn">Ver Productos</a>
 
-</div>
+    </div>
 </section>
 
 <section id="productos">
