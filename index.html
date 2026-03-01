@@ -39,6 +39,7 @@ color:white;
 text-decoration:none;
 margin:0 20px;
 font-weight:500;
+transition:0.3s;
 }
 
 nav a:hover{
@@ -74,7 +75,7 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,60,35,0.75);
+background:linear-gradient(rgba(0,60,35,0.7), rgba(0,0,0,0.6));
 z-index:-1;
 }
 
@@ -97,12 +98,19 @@ margin-bottom:20px;
 display:flex;
 align-items:center;
 justify-content:center;
+animation:flotar 3s ease-in-out infinite;
 }
 
 .logo-circulo img{
 width:100%;
 height:100%;
 object-fit:cover;
+}
+
+@keyframes flotar{
+0%{ transform:translateY(0px); }
+50%{ transform:translateY(-15px); }
+100%{ transform:translateY(0px); }
 }
 
 /* TEXTOS */
@@ -124,6 +132,7 @@ border-radius:30px;
 text-decoration:none;
 font-weight:600;
 transition:0.3s;
+display:inline-block;
 }
 
 .btn:hover{
@@ -150,6 +159,7 @@ background:#d8f3dc;
 .productos{
 display:flex;
 justify-content:center;
+align-items:center;
 flex-wrap:wrap;
 gap:40px;
 }
@@ -163,6 +173,13 @@ overflow:hidden;
 display:flex;
 flex-direction:column;
 align-items:center;
+text-align:center;
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 35px rgba(0,0,0,0.2);
 }
 
 .card img{
@@ -170,11 +187,11 @@ width:100%;
 height:280px;
 object-fit:cover;
 display:block;
+margin:0 auto;
 }
 
 .card-content{
 padding:25px;
-text-align:center;
 }
 
 .precio{
@@ -212,6 +229,7 @@ text-decoration:none;
 box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
+/* RESPONSIVE */
 @media(max-width:768px){
 .hero h1{font-size:2rem;}
 .logo-circulo{width:130px;height:130px;}
@@ -231,8 +249,8 @@ box-shadow:0 5px 15px rgba(0,0,0,0.3);
 <section class="hero" id="inicio">
 
 <!-- VIDEO DE FONDO -->
-<video autoplay muted loop>
-<source src="video.mp4" type="video/mp4">
+<video autoplay muted loop playsinline>
+<source src="./video.mp4" type="video/mp4">
 </video>
 
 <div class="hero-content">
@@ -258,7 +276,7 @@ box-shadow:0 5px 15px rgba(0,0,0,0.3);
 <div class="card-content">
 <h3>Tónico Capilar de Romero</h3>
 <p>Estimula el crecimiento y fortalece las raíces.</p>
-<div class="precio">$$$$$$$$</div>
+<div class="precio">$45.000</div>
 <a href="#" class="btn">Comprar</a>
 </div>
 </div>
@@ -268,7 +286,7 @@ box-shadow:0 5px 15px rgba(0,0,0,0.3);
 <div class="card-content">
 <h3>Aceite de Aguacate</h3>
 <p>Hidrata profundamente y aporta brillo natural.</p>
-<div class="precio">$$$$$$$$</div>
+<div class="precio">$40.000</div>
 <a href="#" class="btn">Comprar</a>
 </div>
 </div>
