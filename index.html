@@ -5,73 +5,79 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Raíces Vivas</title>
 
-<!-- FUENTES ELEGANTES -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
-/* -------------------- ESTILOS GENERALES -------------------- */
+/* ---------------- FONDO CARRUSEL ---------------- */
 body{
     margin:0;
     font-family:'Poppins', sans-serif;
     color:white;
-    background: linear-gradient(rgba(0,40,0,0.8), rgba(0,40,0,0.8)), 
-                url('https://images.unsplash.com/photo-1501785888041-af3ef285b470');
+    overflow-x:hidden;
     background-size:cover;
-    background-attachment:fixed;
+    background-position:center;
+    animation:fondoCarrusel 18s infinite;
 }
 
-/* Títulos elegantes */
-h1, h2{
+@keyframes fondoCarrusel{
+    0% {background-image: linear-gradient(rgba(0,40,0,0.75),rgba(0,40,0,0.75)), url('4d9516dde5c4f0197145373c2721f0a2.jpg');}
+    33% {background-image: linear-gradient(rgba(0,40,0,0.75),rgba(0,40,0,0.75)), url('254d17674be897b556fb15400ecf05f3.jpg');}
+    66% {background-image: linear-gradient(rgba(0,40,0,0.75),rgba(0,40,0,0.75)), url('1cff0919e32126bf4b5e77d75be5dbb9.jpg');}
+    100% {background-image: linear-gradient(rgba(0,40,0,0.75),rgba(0,40,0,0.75)), url('4d9516dde5c4f0197145373c2721f0a2.jpg');}
+}
+
+/* ---------------- TITULOS ---------------- */
+h1,h2{
     text-align:center;
-    letter-spacing:2px;
     font-family:'Playfair Display', serif;
-    font-weight:700;
     color:#e8d29c;
+    letter-spacing:2px;
 }
 
-/* Párrafos */
 p{
-    width:90%;
-    max-width:800px;
-    margin:15px auto;
-    line-height:1.6;
-    font-size:16px;
     text-align:center;
+    max-width:800px;
+    margin:auto;
 }
 
-/* -------------------- LOGO -------------------- */
+/* ---------------- LOGO ANIMADO ---------------- */
 .logo-container{
     text-align:center;
-    margin-top:15px;
+    margin-top:20px;
 }
 
 .logo{
-    width:120px;  /* MÁS PEQUEÑO */
-    height:120px;
+    width:200px;
+    height:200px;
     border-radius:50%;
-    border:4px solid #e8d29c;
+    border:5px solid #e8d29c;
     object-fit:cover;
-    box-shadow:0 0 15px rgba(0,0,0,0.7);
+    animation:flotar 3s ease-in-out infinite;
 }
 
-/* -------------------- PRODUCTOS -------------------- */
+@keyframes flotar{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-12px);}
+    100%{transform:translateY(0);}
+}
+
+/* ---------------- PRODUCTOS ---------------- */
 .productos{
     display:flex;
     justify-content:center;
     gap:20px;
-    padding:20px;
-    flex-wrap:nowrap; /* SIEMPRE LADO A LADO */
+    padding:30px;
+    flex-wrap:nowrap;
 }
 
 .producto-card{
-    background:rgba(18,38,22,0.95);
+    background:rgba(0,0,0,0.65);
     border:2px solid #e8d29c;
     border-radius:15px;
-    width:45%;   /* PARA QUE QUEPAN LOS DOS */
-    padding:15px;
+    width:45%;
+    padding:20px;
     text-align:center;
-    box-shadow:0 0 15px rgba(0,0,0,0.6);
 }
 
 .producto-card img{
@@ -79,7 +85,6 @@ p{
     height:200px;
     object-fit:cover;
     border-radius:10px;
-    border:3px solid #e8d29c;
 }
 
 .producto-card h3{
@@ -87,39 +92,35 @@ p{
     color:#e8d29c;
 }
 
-/* -------------------- GALERÍA -------------------- */
-.galeria{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    padding:20px;
+/* PRECIO */
+.precio{
+    font-size:22px;
+    font-weight:bold;
+    color:#25D366;
+    margin:10px 0;
 }
 
-.galeria img{
-    width:45%;
-    border-radius:20px;
-    border:3px solid #e8d29c;
+/* BOTÓN WHATSAPP */
+.boton{
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 18px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    border-radius:25px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.boton:hover{
+    background:#1ebe5d;
 }
 
 /* RESPONSIVE */
 @media(max-width:600px){
-
-    .productos{
-        flex-wrap:nowrap;
-    }
-
     .producto-card{
         width:48%;
-    }
-
-    .galeria{
-        flex-direction:column;
-        align-items:center;
-    }
-
-    .galeria img{
-        width:90%;
-        margin-bottom:15px;
     }
 }
 
@@ -133,12 +134,7 @@ p{
 </div>
 
 <h1>Raíces Vivas</h1>
-
-<p><strong>Cuidando tu cabello natural</strong></p>
-
-<p>
-Productos elaborados con ingredientes naturales, libres de parabenos, sulfatos y siliconas.
-</p>
+<p>Cuidando tu cabello natural con ingredientes 100% naturales</p>
 
 <h2>Productos Naturales</h2>
 
@@ -147,27 +143,28 @@ Productos elaborados con ingredientes naturales, libres de parabenos, sulfatos y
     <div class="producto-card">
         <img src="imagen1.jpg">
         <h3>Tónico Capilar de Romero</h3>
-        <p>Estimula el crecimiento, fortalece raíces y mejora la circulación del cuero cabelludo.</p>
+        <p>Estimula el crecimiento y fortalece las raíces.</p>
+
+        <div class="precio">$$$$</div>
+
+        <a class="boton" 
+        href="https://wa.me/573234629922?text=Hola%20quiero%20comprar%20el%20Tónico%20Capilar%20de%20Romero" 
+        target="_blank">Comprar</a>
     </div>
 
     <div class="producto-card">
         <img src="imagen2.jpg">
         <h3>Aceite de Aguacate Capilar</h3>
-        <p>Hidrata profundamente, repara daños y aporta brillo natural.</p>
+        <p>Hidratación profunda y brillo natural.</p>
+
+        <div class="precio">$$$$</div>
+
+        <a class="boton" 
+        href="https://wa.me/573234629922?text=Hola%20quiero%20comprar%20el%20Aceite%20de%20Aguacate%20Capilar" 
+        target="_blank">Comprar</a>
     </div>
 
 </div>
-
-<h2>Nuestra esencia natural</h2>
-
-<div class="galeria">
-    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e">
-    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
-</div>
-
-<p>
-Nació con el propósito de ofrecer alternativas saludables frente a productos agresivos que causan resequedad y caída.
-</p>
 
 </body>
 </html>
