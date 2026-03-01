@@ -18,8 +18,8 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#f4f7f4;
-color:#333;
+background:#eef7f0;
+color:#1b4332;
 }
 
 /* NAV */
@@ -27,8 +27,7 @@ nav{
 position:fixed;
 width:100%;
 top:0;
-background:rgba(0,0,0,0.7);
-backdrop-filter:blur(8px);
+background:rgba(13, 71, 41, 0.85);
 display:flex;
 justify-content:center;
 padding:15px;
@@ -44,7 +43,7 @@ transition:0.3s;
 }
 
 nav a:hover{
-color:#4CAF50;
+color:#95d5b2;
 }
 
 /* HERO */
@@ -66,7 +65,7 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,50,0,0.6);
+background:rgba(0, 60, 35, 0.75);
 }
 
 .hero-content{
@@ -75,21 +74,37 @@ z-index:2;
 max-width:800px;
 }
 
+/* LOGO CIRCULAR */
+.logo-circulo{
+width:160px;
+height:160px;
+border-radius:50%;
+overflow:hidden;
+margin:0 auto 20px auto;
+border:5px solid #95d5b2;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.logo-circulo img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
 .hero h1{
 font-size:3rem;
-margin-bottom:20px;
-animation:fadeDown 1s ease;
+margin-bottom:15px;
 }
 
 .hero p{
 margin-bottom:25px;
-animation:fadeUp 1.2s ease;
+font-size:1.1rem;
 }
 
 .btn{
 display:inline-block;
 padding:12px 25px;
-background:#4CAF50;
+background:#2d6a4f;
 color:white;
 border-radius:30px;
 text-decoration:none;
@@ -98,13 +113,13 @@ transition:0.3s;
 }
 
 .btn:hover{
-background:#2e7d32;
+background:#1b4332;
 transform:scale(1.05);
 }
 
 /* SECTIONS */
 section{
-padding:80px 20px;
+padding:90px 20px;
 text-align:center;
 max-width:1200px;
 margin:auto;
@@ -113,14 +128,14 @@ margin:auto;
 h2{
 margin-bottom:40px;
 font-size:2rem;
-color:#1b5e20;
+color:#2d6a4f;
 }
 
 /* PRODUCTOS */
 .productos{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
+gap:35px;
 }
 
 .card{
@@ -129,7 +144,6 @@ border-radius:20px;
 overflow:hidden;
 box-shadow:0 10px 25px rgba(0,0,0,0.1);
 transition:0.4s;
-animation:fadeUp 1s ease;
 }
 
 .card:hover{
@@ -138,50 +152,44 @@ transform:translateY(-10px);
 
 .card img{
 width:100%;
-height:250px;
+height:300px;
 object-fit:cover;
+display:block;
 }
 
 .card-content{
-padding:20px;
+padding:25px;
 }
 
 .card h3{
-color:#2e7d32;
+color:#1b4332;
 margin-bottom:10px;
 }
 
 .precio{
 font-weight:bold;
 margin:15px 0;
-font-size:1.2rem;
-color:#1b5e20;
+font-size:1.3rem;
+color:#2d6a4f;
 }
 
 /* SOBRE */
 .sobre{
-background:#e8f5e9;
+background:#d8f3dc;
 border-radius:20px;
 padding:40px;
-animation:fadeUp 1s ease;
 }
 
-/* TESTIMONIOS */
-.testimonios{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+/* FOOTER */
+footer{
+background:#1b4332;
+color:white;
+text-align:center;
+padding:35px 20px;
+margin-top:60px;
 }
 
-.testimonio{
-background:white;
-padding:20px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
-font-style:italic;
-}
-
-/* WHATSAPP FLOAT */
+/* WHATSAPP */
 .whatsapp{
 position:fixed;
 bottom:20px;
@@ -200,28 +208,9 @@ transition:0.3s;
 transform:scale(1.1);
 }
 
-/* FOOTER */
-footer{
-background:#1b5e20;
-color:white;
-text-align:center;
-padding:30px 20px;
-margin-top:60px;
-}
-
-/* ANIMACIONES */
-@keyframes fadeUp{
-from{opacity:0; transform:translateY(30px);}
-to{opacity:1; transform:translateY(0);}
-}
-
-@keyframes fadeDown{
-from{opacity:0; transform:translateY(-30px);}
-to{opacity:1; transform:translateY(0);}
-}
-
 @media(max-width:768px){
 .hero h1{font-size:2rem;}
+.logo-circulo{width:120px;height:120px;}
 }
 
 </style>
@@ -237,9 +226,15 @@ to{opacity:1; transform:translateY(0);}
 
 <section class="hero" id="inicio">
 <div class="hero-content">
+
+<div class="logo-circulo">
+<img src="logo.jpg" alt="Logo Raíces Vivas">
+</div>
+
 <h1>RAÍCES VIVAS</h1>
 <p>La fuerza de la naturaleza en cada gota. Cuidado capilar 100% natural.</p>
 <a href="#productos" class="btn">Ver Productos</a>
+
 </div>
 </section>
 
