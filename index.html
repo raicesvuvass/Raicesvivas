@@ -1,294 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Raíces Vivas | Cuidado Natural</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins', sans-serif;
-scroll-behavior:smooth;
-}
-
-body{
-background:#e9f5ec;
-color:#1b4332;
-}
-
-/* NAV */
-nav{
-position:fixed;
-width:100%;
-top:0;
-background:rgba(13,71,41,0.9);
-display:flex;
-justify-content:center;
-padding:15px;
-z-index:1000;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin:0 20px;
-font-weight:500;
-}
-
-nav a:hover{
-color:#95d5b2;
-}
-
-/* HERO CON VIDEO */
-.hero{
-position:relative;
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:white;
-overflow:hidden;
-}
-
-.hero video{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-object-fit:cover;
-z-index:-2;
-}
-
-.hero::after{
-content:'';
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,60,35,0.75);
-z-index:-1;
-}
-
-.hero-content{
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-}
-
-/* LOGO */
-.logo-circulo{
-width:180px;
-height:180px;
-border-radius:50%;
-overflow:hidden;
-border:5px solid #95d5b2;
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
-margin-bottom:20px;
-display:flex;
-align-items:center;
-justify-content:center;
-}
-
-.logo-circulo img{
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-/* TEXTOS */
-.hero h1{
-font-size:3rem;
-margin-bottom:10px;
-}
-
-.hero p{
-margin-bottom:25px;
-}
-
-/* BOTON */
-.btn{
-padding:12px 25px;
-background:#2d6a4f;
-color:white;
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
-transition:0.3s;
-}
-
-.btn:hover{
-background:#1b4332;
-transform:scale(1.05);
-}
-
-/* SECCIONES */
-section{
-padding:100px 20px;
-text-align:center;
-}
-
-h2{
-margin-bottom:40px;
-color:#2d6a4f;
-}
-
-/* PRODUCTOS */
-#productos{
-background:#d8f3dc;
-}
-
-.productos{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:40px;
-}
-
-.card{
-background:#ffffff;
-width:320px;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
-overflow:hidden;
-display:flex;
-flex-direction:column;
-align-items:center;
-}
-
-.card img{
-width:100%;
-height:280px;
-object-fit:cover;
-display:block;
-}
-
-.card-content{
-padding:25px;
-text-align:center;
-}
-
-.precio{
-font-weight:bold;
-margin:15px 0;
-font-size:1.3rem;
-color:#2d6a4f;
-}
-
-/* SOBRE */
-#sobre{
-background:#b7e4c7;
-padding:80px 20px;
-}
-
-/* FOOTER */
-footer{
-background:#1b4332;
-color:white;
-text-align:center;
-padding:30px;
-}
-
-/* WHATSAPP */
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px 18px;
-border-radius:50%;
-font-size:20px;
-text-decoration:none;
-box-shadow:0 5px 15px rgba(0,0,0,0.3);
-}
-
-@media(max-width:768px){
-.hero h1{font-size:2rem;}
-.logo-circulo{width:130px;height:130px;}
-}
-
-</style>
+    <meta charset="UTF-8">
+    <title>Mi Tienda Natural</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<nav>
-<a href="#inicio">Inicio</a>
-<a href="#productos">Productos</a>
-<a href="#sobre">Sobre Nosotros</a>
-</nav>
+    <!-- SECCIÓN HERO CON VIDEO -->
+    <section class="hero">
 
-<section class="hero" id="inicio">
+        <video autoplay muted loop playsinline class="video-bg">
+            <source src="video.mp4" type="video/mp4">
+            Tu navegador no soporta video.
+        </video>
 
-<!-- VIDEO DE FONDO -->
-<video autoplay muted loop>
-<source src="video.mp4" type="video/mp4">
-</video>
+        <div class="overlay"></div>
 
-<div class="hero-content">
+        <div class="hero-content">
+            <img src="logo.jpg" alt="Logo" class="logo">
+            <h1>Bienvenidos a Mi Tienda</h1>
+        </div>
 
-<div class="logo-circulo">
-<img src="logo.jpg" alt="Logo Raíces Vivas">
-</div>
+    </section>
 
-<h1>RAÍCES VIVAS</h1>
-<p>La fuerza de la naturaleza en cada gota.</p>
-<a href="#productos" class="btn">Ver Productos</a>
+    <!-- SECCIÓN PRODUCTOS -->
+    <section class="productos">
 
-</div>
-</section>
+        <div class="card">
+            <img src="imagen1.jpg" alt="Producto 1">
+            <h3>Producto 1</h3>
+            <p class="precio">$$$$$$$$$$</p>
+        </div>
 
-<section id="productos">
-<h2>Nuestros Productos</h2>
+        <div class="card">
+            <img src="imagen2.jpg" alt="Producto 2">
+            <h3>Producto 2</h3>
+            <p class="precio">$$$$$$$$$$</p>
+        </div>
 
-<div class="productos">
-
-<div class="card">
-<img src="imagen1.jpg" alt="Tónico">
-<div class="card-content">
-<h3>Tónico Capilar de Romero</h3>
-<p>Estimula el crecimiento y fortalece las raíces.</p>
-<div class="precio">$$$$$$$$</div>
-<a href="#" class="btn">Comprar</a>
-</div>
-</div>
-
-<div class="card">
-<img src="imagen2.jpg" alt="Aceite">
-<div class="card-content">
-<h3>Aceite de Aguacate</h3>
-<p>Hidrata profundamente y aporta brillo natural.</p>
-<div class="precio">$$$$$$$$</div>
-<a href="#" class="btn">Comprar</a>
-</div>
-</div>
-
-</div>
-</section>
-
-<section id="sobre">
-<h2>Sobre Nosotros</h2>
-<p>
-Raíces Vivas ofrece productos naturales para el cuidado capilar,
-respetando la naturaleza y la salud del cabello.
-</p>
-</section>
-
-<footer>
-<p>© 2026 Raíces Vivas - Todos los derechos reservados</p>
-</footer>
-
-<a href="https://wa.me/573234629922" class="whatsapp">💬</a>
+    </section>
 
 </body>
 </html>
