@@ -1,54 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raíces Vivas</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raíces Vivas | Cuidado Natural</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<header>
-    <nav class="navbar">
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#productos">Productos</a></li>
-            <li><a href="#nosotros">Sobre Nosotros</a></li>
-        </ul>
-    </nav>
-</header>
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#productos">Productos</a>
+    <a href="#sobre">Sobre Nosotros</a>
+</nav>
 
-<section id="inicio" class="hero">
+<section class="hero" id="inicio">
 
-    <!-- LOGO CON NOMBRE EXACTO -->
-    <img src="IMG-20260226-WA0002.jpg" class="logo-centro" alt="Logo Raíces Vivas">
+    <video autoplay muted loop playsinline>
+        <source src="./video.mp4" type="video/mp4">
+    </video>
 
-    <h1>RAÍCES VIVAS</h1>
-    <p>La fuerza de la naturaleza en cada gota.</p>
-    <a href="#productos" class="btn-hero">Ver Productos</a>
+    <div class="hero-content">
+
+        <!-- LOGO -->
+        <img src="IMG-20260226-WA0002.jpg" alt="Logo Raíces Vivas" class="logo-centro">
+
+        <h1>RAÍCES VIVAS</h1>
+        <p>La fuerza de la naturaleza en cada gota.</p>
+        <a href="#productos" class="btn">Ver Productos</a>
+
+    </div>
 </section>
 
 <section id="productos" class="productos-section">
     <h2>Nuestros Productos</h2>
 
-    <div class="producto-card">
-        <img src="imagen1.jpg" class="producto-img" alt="">
-        <h3>Tónico Capilar de Romero</h3>
-        <p>Estimula el crecimiento y fortalece las raíces.</p>
-        <span class="precio">$45.000</span>
-        <button class="btn-comprar">Comprar</button>
-    </div>
+    <div class="productos-grid">
 
-    <div class="producto-card">
-        <img src="imagen2.jpg" class="producto-img" alt="">
-        <h3>Aceite Natural Revitalizante</h3>
-        <p>Nutre profundamente y da brillo al cabello.</p>
-        <span class="precio">$40.000</span>
-        <button class="btn-comprar">Comprar</button>
-    </div>
+        <div class="producto-card">
+            <img src="imagen1.jpg" class="producto-img" alt="">
+            <h3>Tónico Capilar de Romero</h3>
+            <p>Estimula el crecimiento y fortalece las raíces.</p>
+            <span class="precio">$45.000</span>
+            <button class="btn-comprar">Comprar</button>
+        </div>
 
+        <div class="producto-card">
+            <img src="imagen2.jpg" class="producto-img" alt="">
+            <h3>Aceite Natural Revitalizante</h3>
+            <p>Nutre profundamente y da brillo al cabello.</p>
+            <span class="precio">$40.000</span>
+            <button class="btn-comprar">Comprar</button>
+        </div>
+
+    </div>
 </section>
+
+<section id="sobre">
+    <h2>Sobre Nosotros</h2>
+    <p>
+        Raíces Vivas ofrece productos naturales para el cuidado capilar,
+        respetando la naturaleza y la salud del cabello.
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 Raíces Vivas - Todos los derechos reservados</p>
+</footer>
+
+<a href="https://wa.me/573234629922" class="whatsapp">💬</a>
 
 </body>
 </html>
