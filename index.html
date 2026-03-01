@@ -1,53 +1,260 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raíces Vivas</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raíces Vivas | Cuidado Natural</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins', sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4f7f4;
+color:#333;
+}
+
+/* NAV */
+nav{
+position:fixed;
+width:100%;
+top:0;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(8px);
+display:flex;
+justify-content:center;
+padding:15px;
+z-index:1000;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 20px;
+font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#4CAF50;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+background:url('https://images.unsplash.com/photo-1501785888041-af3ef285b470') center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+position:relative;
+}
+
+.hero::after{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,50,0,0.6);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:800px;
+}
+
+.hero h1{
+font-size:3rem;
+margin-bottom:20px;
+}
+
+.hero p{
+margin-bottom:25px;
+font-size:1.1rem;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+background:#4CAF50;
+color:white;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#2e7d32;
+transform:scale(1.05);
+}
+
+/* SECTIONS */
+section{
+padding:80px 20px;
+text-align:center;
+max-width:1200px;
+margin:auto;
+}
+
+h2{
+margin-bottom:40px;
+font-size:2rem;
+color:#1b5e20;
+}
+
+/* PRODUCTOS */
+.productos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+color:#2e7d32;
+margin-bottom:15px;
+}
+
+.card p{
+font-size:0.95rem;
+margin-bottom:20px;
+}
+
+/* SOBRE */
+.sobre{
+background:#e8f5e9;
+border-radius:20px;
+padding:40px;
+}
+
+/* TESTIMONIOS */
+.testimonios{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.testimonio{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+font-style:italic;
+}
+
+/* FOOTER */
+footer{
+background:#1b5e20;
+color:white;
+text-align:center;
+padding:30px 20px;
+margin-top:60px;
+}
+
+footer p{
+margin:5px 0;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+.hero h1{
+font-size:2rem;
+}
+}
+
+</style>
 </head>
+
 <body>
 
-<header class="hero">
-    <div class="overlay">
-        <h1>RAÍCES VIVAS</h1>
-        <p>La fuerza de la naturaleza en tu cabello</p>
-        <a href="#productos" class="btn">Conoce nuestros productos</a>
-    </div>
-</header>
+<nav>
+<a href="#inicio">Inicio</a>
+<a href="#productos">Productos</a>
+<a href="#sobre">Sobre Nosotros</a>
+<a href="#contacto">Contacto</a>
+</nav>
 
-<section id="productos" class="productos">
-    <h2>Nuestros Productos</h2>
-
-    <div class="card">
-        <h3>Tónico Capilar de Romero</h3>
-        <p>Estimula el crecimiento del cabello, fortalece las raíces y mejora la circulación del cuero cabelludo.</p>
-    </div>
-
-    <div class="card">
-        <h3>Aceite de Aguacate Capilar</h3>
-        <p>Hidrata profundamente, repara daños y aporta brillo y suavidad gracias a sus vitaminas naturales.</p>
-    </div>
+<section class="hero" id="inicio">
+<div class="hero-content">
+<h1>RAÍCES VIVAS</h1>
+<p>La fuerza de la naturaleza en cada gota. Productos capilares naturales libres de químicos agresivos.</p>
+<a href="#productos" class="btn">Descubrir Productos</a>
+</div>
 </section>
 
-<section class="nosotros">
-    <h2>Sobre Nosotros</h2>
-    <p>
-        Raíces Vivas nació con el propósito de ofrecer productos naturales y efectivos para el cuidado capilar,
-        reduciendo el uso de químicos agresivos y apostando por ingredientes naturales.
-    </p>
+<section id="productos">
+<h2>Nuestros Productos</h2>
+
+<div class="productos">
+
+<div class="card">
+<h3>Tónico Capilar de Romero</h3>
+<p>Estimula el crecimiento, fortalece las raíces y mejora la circulación del cuero cabelludo aportando frescura natural.</p>
+<a href="https://wa.me/573234629922" class="btn">Pedir por WhatsApp</a>
+</div>
+
+<div class="card">
+<h3>Aceite de Aguacate Capilar</h3>
+<p>Hidrata profundamente, repara daños causados por el calor y aporta brillo y suavidad gracias a sus vitaminas esenciales.</p>
+<a href="https://wa.me/573234629922" class="btn">Pedir por WhatsApp</a>
+</div>
+
+</div>
 </section>
 
-<section class="contacto">
-    <h2>Contacto</h2>
-    <p>📞 +57 323 462 9922</p>
-    <p>📧 raicesvivas@gmail.com</p>
-    <a href="https://wa.me/573234629922" class="btn">Escríbenos por WhatsApp</a>
+<section id="sobre">
+<h2>Sobre Nosotros</h2>
+<div class="sobre">
+<p>
+Raíces Vivas nació con el propósito de ofrecer alternativas naturales y efectivas para el cuidado capilar. 
+Creemos en el poder de la naturaleza y en la importancia de reducir el uso de químicos agresivos.
+</p>
+</div>
+</section>
+
+<section>
+<h2>Lo que dicen nuestros clientes</h2>
+<div class="testimonios">
+<div class="testimonio">"Desde que uso el tónico mi cabello crece más fuerte y saludable."</div>
+<div class="testimonio">"El aceite de aguacate dejó mi cabello brillante y suave."</div>
+<div class="testimonio">"Productos naturales que realmente funcionan."</div>
+</div>
+</section>
+
+<section id="contacto">
+<h2>Contacto</h2>
+<p>📞 +57 323 462 9922</p>
+<p>📧 raicesvivas@gmail.com</p>
+<a href="https://wa.me/573234629922" class="btn">Escríbenos ahora</a>
 </section>
 
 <footer>
-    <p>© 2026 Raíces Vivas - Todos los derechos reservados</p>
+<p>© 2026 Raíces Vivas</p>
+<p>Cuidado Capilar Natural</p>
 </footer>
 
 </body>
